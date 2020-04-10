@@ -1,9 +1,10 @@
 import React from "react";
+import MenuSuperior from "./components/Menu/MenuSuperior";
 
 export default function App() {
   return (
-    <div className="botao">
-      <button className="btn">Teste</button>
+    <div>
+      <MenuSuperior />
     </div>
   );
 }
