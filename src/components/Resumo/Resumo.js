@@ -5,7 +5,7 @@ export default class Resumo extends Component {
     super(props);
     this.state = {
       consultas: {
-        consultas_30dias_anteiores: 0,
+        consultas_30dias_anteiores: 1,
         consultas_30dias_posteriores: 0,
       },
       faturamento: {
@@ -41,7 +41,7 @@ export default class Resumo extends Component {
               </div>
               <div className="col">
                 <div className="card mt-2 text-center">
-                  <div className="card-header">Pr?ximos 30 dias</div>
+                  <div className="card-header">Proximos 30 dias</div>
                   <div className="card-body">
                     {this.state.consultas.consultas_30dias_posteriores}
                   </div>
@@ -76,7 +76,7 @@ export default class Resumo extends Component {
               </div>
               <div className="col">
                 <div className="card mt-2 text-center">
-                  <div className="card-header">Pr?ximos 30 dias</div>
+                  <div className="card-header">Proximos 30 dias</div>
                   <div className="card-body">
                     {this.state.faturamento.previsao.valor.toLocaleString(
                       "pt-BR",
