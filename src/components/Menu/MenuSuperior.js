@@ -6,7 +6,7 @@ export default class MenuSuperior extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link to="/" className="navbar-brand">
-          DevMedia
+          DevReact
         </Link>
         <button
           className="navbar-toggler"
