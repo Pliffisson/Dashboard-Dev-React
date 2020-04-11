@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { URL_API } from "../../services/Api";
+import { consultarFaturamento } from "../../services/FaturamentoApi";
 
 export default class Faturamento extends Component {
   constructor(props) {
@@ -10,9 +10,7 @@ export default class Faturamento extends Component {
   }
 
   componentDidMount() {
-    fetch(URL_API + "/faturamento").then((resultado) =>
-      resultado.json().then((dados) => this.setState(dados))
-    );
+    consultarFaturamento().then((dados) => this.setState(dados));
   }
 
   render() {

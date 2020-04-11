@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { URL_API } from "../../services/Api";
+import { listarConsultas } from "../../services/ConsultasApi";
 
 export default class Consultas extends Component {
   constructor(props) {
@@ -11,9 +11,7 @@ export default class Consultas extends Component {
   }
 
   componentDidMount() {
-    fetch(URL_API + "/consultas").then((resultado) =>
-      resultado.json().then((dados) => this.setState(dados))
-    );
+    listarConsultas().then((dados) => this.setState(dados));
   }
 
   render() {
