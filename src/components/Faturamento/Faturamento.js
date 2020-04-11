@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { URL_API } from "../../services/Api";
 
 export default class Faturamento extends Component {
   constructor(props) {
@@ -9,9 +10,7 @@ export default class Faturamento extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "http://www.devup.com.br/php/api-dashboard/api/faturamento"
-    ).then((resultado) =>
+    fetch(URL_API + "/faturamento").then((resultado) =>
       resultado.json().then((dados) => this.setState(dados))
     );
   }

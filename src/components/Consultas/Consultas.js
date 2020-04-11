@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { URL_API } from "../../services/Api";
 
 export default class Consultas extends Component {
   constructor(props) {
@@ -10,9 +11,7 @@ export default class Consultas extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "http://www.devup.com.br/php/api-dashboard/api/consultas"
-    ).then((resultado) =>
+    fetch(URL_API + "/consultas").then((resultado) =>
       resultado.json().then((dados) => this.setState(dados))
     );
   }
